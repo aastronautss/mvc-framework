@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  background-color: #39466b;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nNTAwJyBoZWlnaHQ9JzUwMCc+Cgk8ZGVmcz4KCQk8ZyBpZD0nYSc+CgkJCTxyZWN0IGZpbGw9JyMzMTM3NjMnIHdpZHRoPScxMDAnIGhlaWdodD0nMTAwJy8+CgkJCTxyZWN0IHg9JzEwMCcgZmlsbD0nIzE5MjAzZCcgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnLz4KCQkJPHJlY3QgeD0nMjAwJyBmaWxsPScjMzk0NjZiJyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcvPgoJCQk8cmVjdCB4PSczMDAnIGZpbGw9JyMwMjA4MzMnIHdpZHRoPScxMDAnIGhlaWdodD0nMTAwJy8+CgkJCTxyZWN0IHg9JzQwMCcgZmlsbD0nIzM5NDY2Yicgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnLz4KCQkJPHJlY3QgeD0nNTAwJyBmaWxsPScjMzEzNzYzJyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcvPgoJCQk8cmVjdCB4PSc2MDAnIGZpbGw9JyMxOTIwM2QnIHdpZHRoPScxMDAnIGhlaWdodD0nMTAwJy8+CgkJCTxyZWN0IHg9JzcwMCcgZmlsbD0nIzM5NDY2Yicgd2lkdGg9JzEwMCcgaGVpZ2h0PScxMDAnLz4KCQkJPHJlY3QgeD0nODAwJyBmaWxsPScjMDIwODMzJyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcvPgoJCTwvZz4KCTwvZGVmcz4KCTx1c2UgeD0nLTQwMCcgeT0nMCcgeGxpbms6aHJlZj0nI2EnLz4gIAoJPHVzZSB4PSctMzAwJyB5PScxMDAnIHhsaW5rOmhyZWY9JyNhJy8+Cgk8dXNlIHg9Jy0yMDAnIHk9JzIwMCcgeGxpbms6aHJlZj0nI2EnLz4KCTx1c2UgeD0nLTEwMCcgeT0nMzAwJyB4bGluazpocmVmPScjYScvPgoJPHVzZSB4PScwJyB5PSc0MDAnIHhsaW5rOmhyZWY9JyNhJy8+Cjwvc3ZnPg==');
+}
+
+main {
+  min-width: 400px;
+  max-width: 800px;
+  height: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  font: normal 16px Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+h1 {
+  padding: 0 0 20px 0;
+  margin: 0;
+  font-size: 1.6em;
+}
+
+
+dl {
+  overflow: hidden;
+  padding: 0 0 10px 0;
+}
+dt {
+  clear: both;
+  float: left;
+  width: 80px;
+  font-weight: bold;
+}
+dd {
+  margin: 0;
+  overflow: hidden;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+li { list-style: none; }
+
+li dl {
+  display: inline-block;
+  min-width: 250px;
+  vertical-align: middle;
+}
+
+form {
+  padding: 15px 0 0 0;
+  border-top: 1px solid #c5c5c5;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+form dt { padding: 5px 0; }
+
+input[type="text"] {
+  width: 180px;
+  height: 24px;
+  padding: 0 5px;
+  font: normal 14px Helvetica, Arial, sans-serif;
+}
+
+input[type="submit"], a {
+  display: inline-block;
+  padding: 12px 20px;
+  font: normal 16px Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #39466b 0%, #020833 100%);
+}
+
+a {
+  text-decoration: none;
+  background: linear-gradient(to bottom, #b00b00 0%, #8a0310 100%);
+}
