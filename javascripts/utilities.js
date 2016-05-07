@@ -1,3 +1,10 @@
+// ====----------------------====
+// utilities.js
+// ====----------------------====
+//
+// A simple utility library for JavaScript that adds some functionality to
+// arrays, collections, and objects.
+
 (function() {
   var findObjs = function(element, props, multiple) {
     var match = multiple ? [] : undefined;
@@ -25,12 +32,41 @@
 
   var _ = function(element) {
     u = {
+
+      // ====------------------====
+      // Arrays / Collections
+      // ====------------------====
+
+      // Indices
+
       first: function() {
         return element[0];
       },
 
       last: function() {
         return element[element.length - 1];
+      },
+
+      // Boolean
+
+      any: function(callback) {
+        var result = false;
+
+        element.forEach(function(el, idx, element) {
+          if (callback(el, idx, element)) { result = true; }
+        });
+
+        return result;
+      },
+
+      all: function(callback) {
+        return element.every(callback);
+      },
+
+      // Filters
+
+      select: function(callback) {
+        return element.filter(callback);
       },
 
       without: function() {
@@ -74,6 +110,10 @@
       where: function(match_properties) {
         return findObjs(element, match_properties, true);
       },
+
+      // ====------------------====
+      // Objects
+      // ====------------------====
 
       pluck: function(key) {
         var result = [];

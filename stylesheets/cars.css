@@ -41,13 +41,39 @@ ul {
   padding: 0;
   margin: 0;
 }
-li { list-style: none; }
+li {
+  position: relative;
+  list-style: none;
+}
 
 li dl {
   display: inline-block;
   min-width: 250px;
   vertical-align: middle;
 }
+
+li form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: #ffffff;
+}
+li fieldset {
+  display: inline-block;
+  vertical-align: top;
+}
+li form dl {
+  display: block;
+  margin: 0;
+}
+li form dt { padding: 0; }
+li input[type="text"] {
+  height: 18px;
+}
+li form input[type="submit"] { margin: 0 10px; }
 
 form {
   padding: 15px 0 0 0;

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-US">
   <head>
-    <title>Collection Part 2 Test</title>
+    <title>View Part 1 Test</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="stylesheets/cars.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -31,19 +31,31 @@
     </main>
 
     <script id="cars" type="text/x-handlebars">
-      {{#each cars}}
-      <li>
-        <dl>
-          {{#with attributes}}
-          <dt>Make:</dt>
-          <dd>{{make}}</dd>
-          <dt>Model:</dt>
-          <dd>{{model}}</dd>
-          {{/with}}
-        </dl>
-        <a data-id="{{id}}" href="#">Remove</a>
-      </li>
-      {{/each}}
+      <dl>
+        <dt>Make:</dt>
+        <dd>{{make}}</dd>
+        <dt>Model:</dt>
+        <dd>{{model}}</dd>
+      </dl>
+      <a data-id="{{id}}" href="#">Remove</a>
+    </script>
+
+    <script id="edit" type="text/x-handlebars">
+      <form action="" method="post">
+        <fieldset>
+          <dl>
+            <dt>Make:</dt>
+            <dd><input type="text" name="edit_make" value="{{make}}" /></dd>
+          </dl>
+          <dl>
+            <dt>Model:</dt>
+            <dd><input type="text" name="edit_model" value="{{model}}" /></dd>
+          </dl>
+        </fieldset>
+        <fieldset>
+          <input type="submit" value="Save" /><a href="#">Cancel</a>
+        </fieldset>
+      </form>
     </script>
 
     <script src="javascripts/app.js"></script>
