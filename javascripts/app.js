@@ -1,27 +1,50 @@
-var Car = ModelConstructor({
-      change: render
-    }),
-    bmw = new Car({
-      make: "BMW",
-      model: "328i"
-    });
+var template = Handlebars.compile($("#cars").html());
 
-render();
+var Car = new ModelConstructor(),
+    Cars = new CollectionConstructor(),
+    inventory = new Cars(Car);
+
+inventory.set([{
+  make: "BMW",
+  model: "328i"
+}, {
+  make: "Mini",
+  model: "Cooper"
+}, {
+  make: "Lotus",
+  model: "Elise"
+}]);
+
+$("a").on("click", function(e) {
+  e.preventDefault();
+
+  inventory.reset();
+  render();
+});
 
 $("form").on("submit", function(e) {
   e.preventDefault();
-  var make = $(this).find("[name=make]").val(),
-      model = $(this).find("[name=model]").val();
+  var $form = $(this),
+      properties = {
+        make: $form.find("[name=make]").val(),
+        model: $form.find("[name=model]").val()
+      };
 
-  if (make !== bmw.attributes.make) {
-    bmw.set("make", make);
-  }
-  if (model !== bmw.attributes.model) {
-    bmw.set("model", model);
-  }
+  inventory.add(properties);
+  render();
+  this.reset();
 });
 
+$("ul").on("click", "a", function(e) {
+  e.preventDefault();
+  var $e = $(e.target);
+
+  inventory.remove(+$e.attr("data-id"));
+  $e.closest("li").remove();
+});
+
+render();
+
 function render() {
-  $("#make").text(bmw.get("make"));
-  $("#model").text(bmw.get("model"));
+  $("ul").html(template({ cars: inventory.models }));
 }
